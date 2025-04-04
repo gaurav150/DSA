@@ -1,1 +1,2 @@
-First commit
+First commit <br>
+IN THIS REPOSITORY WE ARE TRYING TO UNDERSTAND DSA <br>
