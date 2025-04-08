@@ -1,3 +1,9 @@
+import sys
+
+sys.setrecursionlimit(10**6)
+# Function to count the number of digits in a positive integer using recursion
+
+
 def count_digits(n):
     """
     Function to find the number of digits in a number using recursion.
@@ -8,13 +14,18 @@ def count_digits(n):
     Returns:
     int: The number of digits in the integer.
     """
-    # Your code here
-    if n == 0:
+    # Base case: if n is a single-digit number
+    if n >= 1 and n <= 9:
         return 1
-    elif n < 10:
+    elif n == 0:
         return 1
     else:
-        return 1 + count_digits(n//10)
+        # Recursive case: count the current digit and continue with the rest
+        return 1 + count_digits(n // 10)
+
+# Example usage:
+print(count_digits(12345))  # Output: 5
+print(count_digits(9))      # Output: 1
     
 # Test cases
 def test_count_digits():
