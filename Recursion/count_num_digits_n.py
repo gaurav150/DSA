@@ -15,9 +15,7 @@ def count_digits(n):
     int: The number of digits in the integer.
     """
     # Base case: if n is a single-digit number
-    if n >= 1 and n <= 9:
-        return 1
-    elif n == 0:
+    if n < 10:
         return 1
     else:
         # Recursive case: count the current digit and continue with the rest
